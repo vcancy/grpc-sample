@@ -1,0 +1,20 @@
+// proto语法
+syntax = "proto3";
+// 包名字
+package demo;
+
+// 服务定义
+service Greeter{
+    rpc SayHi(HiRequest) returns (HiReply){}
+}
+
+// 请求消息
+message HiRequest{
+    string name = 1;
+}
+
+// 响应消息
+
+message HiReply{
+    string message = 1;
+}
